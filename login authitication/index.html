@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login authetication</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">sign up</h1>
+            <form >
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="name">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-envelope'></i>
+                        <input type="email" placeholder="email">
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-lock'></i>
+                        <input type="password" placeholder="password">
+                    </div>
+                    <p> Forget Password <a herf="#">Click Here!</a></p>
+                </div>
+                <div class="btn">
+                    <button type="button" id="signupbtn">sign up</button>
+                    <button type="button"class="disable" id="signinbtn">sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let signupbtn=document.getElementById("signupbtn");
+        let signinbtn=document.getElementById("signinbtn");
+        let nameField=document.getElementById("nameField");
+        let title =document.getElementById("title");
+
+
+
+           signinbtn.onclick=function(){
+            nameField.style.maxHeight= "0";
+            title.innerHTML= "sign in";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable")
+        }
+        signupbtn.onclick=function(){
+            nameField.style.maxHeight= "60px";
+            title.innerHTML= "sign up";
+            signupbtn.classList.remove("disable");
+            signinbtn.classList.add("disable")
+        }
+    </script>
+</body>
+</html>
